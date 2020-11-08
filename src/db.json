@@ -19,6 +19,18 @@
             "stars": 4,
             "id": 1
         }
+        { 
+            "shopId": 1,
+            "body": "Cute for handmade, but it faded in the first wash.",
+            "stars": 2,
+            "id": 2
+        }
+        { 
+            "shopId": 1,
+            "body": "Great gift for my BFF's first baby.",
+            "stars": 5,
+            "id": 3
+        }
     ],
     "shopItem": [
         {
