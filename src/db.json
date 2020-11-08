@@ -1,0 +1,79 @@
+{
+    "shopOwner": [
+        { 
+            "id": 1,
+            "shopName": "growing up rosie",
+            "title": "Owner",
+            "name": "Rosemary Meyers",
+            "shopLogo": "" ,
+            "shopLogoText": "",
+            "shopLocation": "Philadelphia, Pennsylvania",
+            "shopSales": 0,
+            "faveShop": 0
+        }
+    ],
+    "reviews": [
+        { 
+            "shopId": 1,
+            "body": "So cute, love it!",
+            "stars": 4,
+            "id": 1
+        }
+    ],
+    "shopItem": [
+        {
+            "name": "10 Fingers 10 Toes I'm Good Onesie",
+            "itemType": "Onesie",
+            "size": "3-6 months",
+            "price": "$15.00",
+            "color": "white",
+            "printColor": "black, red",
+            "picture": ""
+        },
+        {
+            "name": "1/2 Pint Onesie",
+            "itemType": "Onesie",
+            "size": "3-6 months",
+            "price": "$15.00",
+            "color": "white",
+            "printColor": "blue",
+            "picture": ""
+        },
+        {
+            "name": "offspring",
+            "itemType": "Onesie",
+            "size": "3-6 months",
+            "price": "$15.00",
+            "color": "white",
+            "printColor": "orange",
+            "picture": ""
+        },
+        {
+            "name": "locally grown Onesie",
+            "itemType": "Onesie",
+            "size": "3-6 months",
+            "price": "$15.00",
+            "color": "yellow",
+            "printColor": "blue, green",
+            "picture": ""
+        },
+        {
+            "name": "Man Onesie",
+            "itemType": "Onesie",
+            "size": "3-6 months",
+            "price": "$15.00",
+            "color": "white",
+            "printColor": "green",
+            "picture": ""
+        },
+        {
+            "name": "locally grown",
+            "itemType": "Onesie",
+            "size": "3-6 months",
+            "price": "$15.00",
+            "color": "white",
+            "printColor": "blue, green",
+            "picture": ""
+        }
+    ]
+} 

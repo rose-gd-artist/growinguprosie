@@ -1,7 +1,6 @@
 .appHeader {
-
     width: 100vw;
-    height: 20vw;
+    height: 25vw;
     background-color: #fff;
 
 }
@@ -36,20 +35,51 @@
 .saleNumber {
     position: absolute;
     top: 13.583vw;
-    font-size: 1.2vw;
     color: #f4aed3;
     font-size: 1.8vw;
 }
 .averageStarRating {
     position: absolute;
-    top: 14vw;
-    left: 22vw;
+    top: 17.35vw;
     width: 8.879vw;
     display: grid;
-    /* grid: 8.879vw; */
     grid-template-columns: auto auto auto auto auto;
     grid-gap: 0.486vw;
 }
 .starEmpty {
     width: 1.384vw;
+}
+.totalReviewsTally {
+    color: #f4aed3;
+    font-size: 1.8vw;   
+    position: absolute;
+    top: 16.9vw;
+    left: 27vw;
+}
+.faveShop {
+    display: inline-block;
+}
+.faveShopOpenHeart {
+    width: 1.723vw;
+    position: absolute;
+    top: 21vw;
+}
+.faveShopTally {
+    color: #f4aed3;
+    font-size: 1.8vw;   
+    position: absolute;
+    top: 20.7vw;
+    left: 19.5vw;
+}
+.emptyCartTab {
+    width: 8.183vw;
+    position: absolute;
+    top: 16.9vw;
+    right: 0vw;
+}
+.shopCart {
+    width: 4.043vw;
+    position: absolute;
+    top: 18.3vw;
+    right: 1vw;
 }

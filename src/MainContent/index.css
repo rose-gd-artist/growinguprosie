@@ -1,0 +1,19 @@
+.contentPage {
+    width: 100vw;
+    display: grid;   
+    grid-template-columns: auto auto auto;
+    grid-gap: 0.1vw;
+}
+.indexItem {
+    width: 18vw;
+    height: 25vw;
+    background-color: #fff;
+    color: #00a33d;
+    text-align: center;
+    padding-top: 1.5vw;
+}
+.indexPic {
+    width: 15vw;
+
+
+}
