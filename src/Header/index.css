@@ -1,0 +1,55 @@
+.appHeader {
+
+    width: 100vw;
+    height: 20vw;
+    background-color: #fff;
+
+}
+.circleLogo {
+    width: 11.583vw;
+    margin: 3.333vw;
+    margin-right: 1.667vw;
+}
+.textLogo {
+    width: 18.917vw;
+    position: absolute;
+    top: 3.333vw;
+}
+.locationLine {
+    display: inline-block;
+}
+.mapMarker {
+    width: 1.094vw;
+    position: absolute;
+    top: 10.208vw;
+}
+.cityState {
+    color: #f4aed3;
+    position: absolute;
+    top: 10vw;
+    left: 18.5vw;
+    font-size: 1.8vw;
+}
+.salesStarsLine {
+    display: inline-block;
+}
+.saleNumber {
+    position: absolute;
+    top: 13.583vw;
+    font-size: 1.2vw;
+    color: #f4aed3;
+    font-size: 1.8vw;
+}
+.averageStarRating {
+    position: absolute;
+    top: 14vw;
+    left: 22vw;
+    width: 8.879vw;
+    display: grid;
+    /* grid: 8.879vw; */
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 0.486vw;
+}
+.starEmpty {
+    width: 1.384vw;
+}
