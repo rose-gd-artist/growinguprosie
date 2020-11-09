@@ -10,8 +10,6 @@ import './images/makeFaveShop.svg';
 import './images/unFaveShop.svg';
 import './images/contactButton.svg';
 import './images/shopCart.svg';
-import './images/emptyCartTab.svg';
-import './images/greenTab.svg';
 
 
 const Header = () => {
@@ -50,12 +48,8 @@ const Header = () => {
                 </div>
             </div>
 
-        <div className="headerRightSide">
-            {/* <p className="shopOwnerTitle">Shop Owner</p>
-            <p className="shopOwnerName">Rosemary Meyers</p>
-            <img src={window.location.origin + '/images/contactButton.svg'} alt="contact button" className="contactButton"/> */}
-            
-            <img src={window.location.origin + '/images/shopCart.svg'} alt="shopping cart" className="shopCart"/>
+            <div className="headerRightSide">
+                <img src={window.location.origin + '/images/shopCart.svg'} alt="shopping cart" className="shopCart"/>
             </div>
         </div>
     );
