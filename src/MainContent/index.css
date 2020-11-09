@@ -1,19 +1,35 @@
 .contentPage {
     width: 100vw;
-    display: grid;   
-    grid-template-columns: auto auto auto;
-    grid-gap: 0.1vw;
+    display: flex;   
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    padding: 4vw 15vw 0vw;
 }
 .indexItem {
     width: 18vw;
-    height: 25vw;
     background-color: #fff;
-    color: #00a33d;
-    text-align: center;
-    padding-top: 1.5vw;
+    margin-bottom: 4vw;
+    padding: 1.5vw;
 }
 .indexPic {
     width: 15vw;
-
-
+}
+.indexItem .indexItemType {
+    color: #00a33d;
+    font-size: 1.6vw;
+    font-weight: 400;
+    text-align: left;
+}
+.indexItem .indexItemDetail {
+    color: #00a33d;
+    font-size: 1.6vw;
+    font-weight: 400;
+    text-align: left;
+}
+.indexItem .indexItemPrice {
+    color: #00a33d;
+    font-size: 1.6vw;
+    font-weight: 700;
+    text-align: left;
 }

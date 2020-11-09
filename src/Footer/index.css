@@ -1,0 +1,20 @@
+.footerBox {
+    width: 100vw;
+    height: 15vw;
+    background-color: #ffffff;
+    color:  #00a33d;
+    font-size: 1.6vw;
+    text-align: center;
+}
+.footerLinksDiv {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 2vw;
+}
+.footerContact, .footerShopPolicies, .footerShipping, .footerPayments, .footerReturnsExchanges {
+    margin: 4vw;
+}
+.footerInfo {
+    margin: 1vw;
+}

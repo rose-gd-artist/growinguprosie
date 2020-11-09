@@ -1,50 +1,86 @@
 .appHeader {
     width: 100vw;
-    height: 25vw;
     background-color: #fff;
-
+    display: flex;
+    flex-flow: row;
+    position: relative;
+}
+.logoLeft {
+    width: 11.583vw;
+    margin: 3.333vw 1.667vw 2vw 3.333vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 .circleLogo {
     width: 11.583vw;
-    margin: 3.333vw;
-    margin-right: 1.667vw;
+    margin-bottom: 0.5vw;
+}
+.shopOwnerTitle {
+    color: #f4aed3;
+    font-size: 1.4vw;  
+    font-weight: 600; 
+}
+.shopOwnerName {
+    color: #f4aed3;
+    font-size: 1.4vw;  
+    font-weight: 400;
+    margin-bottom: 0.75vw; 
+}
+.contactButton {
+    width: 2.8vw;
+}
+.headerLeftSide {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    margin: 3.333vw 1.667vw 1vw 0vw;
 }
 .textLogo {
     width: 18.917vw;
-    position: absolute;
-    top: 3.333vw;
+    margin-bottom: 1vw;
+    font-weight: 400;
 }
 .locationLine {
-    display: inline-block;
+    display: flex;
+    flex-flow: wrap row;
+    align-items: baseline;
+    margin-bottom: 1vw;
 }
 .mapMarker {
     width: 1.094vw;
-    position: absolute;
-    top: 10.208vw;
+    margin-right: 0.75vw;
 }
 .cityState {
     color: #f4aed3;
-    position: absolute;
-    top: 10vw;
-    left: 18.5vw;
     font-size: 1.8vw;
+    font-weight: 400;
 }
-.salesStarsLine {
-    display: inline-block;
+.salesLine {
+    display: flex;
+    flex-flow: wrap row;
+    align-items: baseline;
+    margin-bottom: 1vw;
 }
 .saleNumber {
-    position: absolute;
-    top: 13.583vw;
     color: #f4aed3;
     font-size: 1.8vw;
+    font-weight: 400;
+}
+.starsLine {
+    display: flex;
+    flex-flow: wrap row;
+    align-items: baseline;
+    margin-bottom: 1vw;
 }
 .averageStarRating {
-    position: absolute;
-    top: 17.35vw;
     width: 8.879vw;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     grid-gap: 0.486vw;
+    font-weight: 400;
+    margin-right: 0.75vw;
 }
 .starEmpty {
     width: 1.384vw;
@@ -52,34 +88,35 @@
 .totalReviewsTally {
     color: #f4aed3;
     font-size: 1.8vw;   
-    position: absolute;
-    top: 16.9vw;
-    left: 27vw;
+    font-weight: 400;
 }
 .faveShop {
-    display: inline-block;
+    display: flex;
+    flex-flow: wrap row;
+    align-items: baseline;
 }
 .faveShopOpenHeart {
     width: 1.723vw;
-    position: absolute;
-    top: 21vw;
+    margin-right: 0.75vw;
 }
 .faveShopTally {
     color: #f4aed3;
-    font-size: 1.8vw;   
-    position: absolute;
-    top: 20.7vw;
-    left: 19.5vw;
+    font-size: 1.8vw;  
+    font-weight: 400; 
 }
-.emptyCartTab {
+.headerRightSide {
     width: 8.183vw;
-    position: absolute;
-    top: 16.9vw;
-    right: 0vw;
+    height: 5.71vw;
+    border-top-left-radius: 3vw;
+    border-bottom-left-radius: 3vw;
+    background-color: #d2fcdc;
+    top: 15.62vw;
+    right: -54.65vw;
+    position: relative;
 }
 .shopCart {
     width: 4.043vw;
-    position: absolute;
-    top: 18.3vw;
-    right: 1vw;
+    left: 3.2vw;
+    top: 1.45vw;
+    position: relative;
 }

@@ -34,55 +34,61 @@
     ],
     "shopItem": [
         {
-            "name": "10 Fingers 10 Toes I'm Good Onesie",
-            "itemType": "Onesie",
+            "name": "10 Fingers 10 Toes I'm Good",
+            "itemType": "Infant Onesie",
             "size": "3-6 months",
             "price": "$15.00",
+            "quantity": 1,
             "color": "white",
             "printColor": "black, red",
             "picture": ""
         },
         {
-            "name": "1/2 Pint Onesie",
-            "itemType": "Onesie",
+            "name": "1/2 Pint",
+            "itemType": "Infant Onesie",
             "size": "3-6 months",
             "price": "$15.00",
+            "quantity": 1,
             "color": "white",
             "printColor": "blue",
             "picture": ""
         },
         {
             "name": "offspring",
-            "itemType": "Onesie",
+            "itemType": "Infant Onesie",
             "size": "3-6 months",
             "price": "$15.00",
+            "quantity": 1,
             "color": "white",
             "printColor": "orange",
             "picture": ""
         },
         {
-            "name": "locally grown Onesie",
-            "itemType": "Onesie",
+            "name": "locally grown",
+            "itemType": "Infant Onesie",
             "size": "3-6 months",
             "price": "$15.00",
+            "quantity": 1,
             "color": "yellow",
             "printColor": "blue, green",
             "picture": ""
         },
         {
-            "name": "Man Onesie",
-            "itemType": "Onesie",
+            "name": "Man Symbol",
+            "itemType": "Infant Onesie",
             "size": "3-6 months",
             "price": "$15.00",
+            "quantity": 1,
             "color": "white",
             "printColor": "green",
             "picture": ""
         },
         {
             "name": "locally grown",
-            "itemType": "Onesie",
+            "itemType": "Infant Onesie",
             "size": "3-6 months",
             "price": "$15.00",
+            "quantity": 1,
             "color": "white",
             "printColor": "blue, green",
             "picture": ""
