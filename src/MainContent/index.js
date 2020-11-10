@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import './index.css';
+// import images from './images.js';
 
 const MainContent = (props) => {
 
@@ -17,32 +18,17 @@ const MainContent = (props) => {
     return (
         <div className="contentPage">
   
-                {responseShopItem.forEach((item) => {
+                {responseShopItem.map((item) => {
 
-                    <div className="indexItem">
-                        <img src={window.location.origin + '/images/10FingersPic.jpg'} alt="10 Fingers 10 Toes I'm Good Onesie" className="indexPic"/>
-                        <p className="indexItemType">itemType={item.itemType}</p>
-                        <p className="indexItemDetail">name={item.name}</p>
-                        <p className="indexItemPrice">price={item.price}</p>
-                    </div>
+                    return (
+                        <div className="indexItem">
+                            <img src={window.location.origin + "/images/" + item.picture} alt={item.name} className="indexPic"/>
+                            <p className="indexItemType">{item.itemType}</p>
+                            <p className="indexItemDetail">{item.name}</p>
+                            <p className="indexItemPrice">{item.price}</p>
+                        </div>
+                    );
                 })}
-    
-            {/* {responseShopItem.forEach((item) => {
-
-                <div className="indexItem">
-                    <img src={window.location.origin + '/images/10FingersPic.jpg'} alt="10 Fingers 10 Toes I'm Good Onesie" className="indexPic"/>
-                    <p className="indexItemType">itemType={item.itemType}</p>
-                    <p className="indexItemDetail">name={item.name}</p>
-                    <p className="indexItemPrice">price={item.price}</p>
-                </div>
-
-            })} */}
-            {/* <div className="indexItem">
-                <img src={window.location.origin + '/images/10FingersPic.jpg'} alt="10 Fingers 10 Toes I'm Good Onesie" className="indexPic"/>
-                <p className="indexItemType">{responseShopItem.itemType}</p>
-                <p className="indexItemDetail">{responseShopItem.name}</p>
-                <p className="indexItemPrice">{responseShopItem.price}</p>
-            </div> */}
         </div>
 
     );

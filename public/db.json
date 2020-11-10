@@ -41,7 +41,7 @@
             "quantity": 1,
             "color": "white",
             "printColor": "black, red",
-            "picture": ""
+            "picture": "10FingersPic.jpg"
         },
         {
             "name": "1/2 Pint",
@@ -51,7 +51,7 @@
             "quantity": 1,
             "color": "white",
             "printColor": "blue",
-            "picture": ""
+            "picture": "halfPintPic.jpg"
         },
         {
             "name": "offspring",
@@ -61,7 +61,7 @@
             "quantity": 1,
             "color": "white",
             "printColor": "orange",
-            "picture": ""
+            "picture": "offspringPic.jpg"
         },
         {
             "name": "locally grown",
@@ -71,7 +71,7 @@
             "quantity": 1,
             "color": "yellow",
             "printColor": "blue, green",
-            "picture": ""
+            "picture": "locallyGrownPic.jpg"
         },
         {
             "name": "Man Symbol",
@@ -81,7 +81,7 @@
             "quantity": 1,
             "color": "white",
             "printColor": "green",
-            "picture": ""
+            "picture": "greenManPic.jpg"
         },
         {
             "name": "locally grown",
@@ -91,7 +91,7 @@
             "quantity": 1,
             "color": "white",
             "printColor": "blue, green",
-            "picture": ""
+            "picture": "IMG_2016.jpg"
         }
     ]
 } 
