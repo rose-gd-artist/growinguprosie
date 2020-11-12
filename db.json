@@ -1,0 +1,97 @@
+{
+  "shopOwner": [
+      { 
+          "id": 1,
+          "shopName": "growing up rosie",
+          "title": "Owner",
+          "name": "Rosemary Meyers",
+          "shopLogo": "" ,
+          "shopLogoText": "",
+          "shopLocation": "Philadelphia, Pennsylvania",
+          "shopSales": 0,
+          "faveShop": 0
+      }
+  ],
+  "reviews": [
+      { 
+          "shopId": 1,
+          "body": "So cute, love it!",
+          "stars": 4,
+          "id": 1
+      },
+      { 
+          "shopId": 1,
+          "body": "Cute for handmade, but it faded in the first wash.",
+          "stars": 2,
+          "id": 2
+      },
+      { 
+          "shopId": 1,
+          "body": "Great gift for my BFF's first baby.",
+          "stars": 5,
+          "id": 3
+      }
+  ],
+  "shopItem": [
+      {
+          "name": "10 Fingers 10 Toes I'm Good",
+          "itemType": "Infant Onesie",
+          "size": "3-6 months",
+          "price": "$15.00",
+          "quantity": 1,
+          "color": "white",
+          "printColor": "black, red",
+          "picture": "10FingersPic.jpg"
+      },
+      {
+          "name": "1/2 Pint",
+          "itemType": "Infant Onesie",
+          "size": "3-6 months",
+          "price": "$15.00",
+          "quantity": 1,
+          "color": "white",
+          "printColor": "blue",
+          "picture": "halfPintPic.jpg"
+      },
+      {
+          "name": "offspring",
+          "itemType": "Infant Onesie",
+          "size": "3-6 months",
+          "price": "$15.00",
+          "quantity": 1,
+          "color": "white",
+          "printColor": "orange",
+          "picture": "offspringPic.jpg"
+      },
+      {
+          "name": "locally grown",
+          "itemType": "Infant Onesie",
+          "size": "3-6 months",
+          "price": "$15.00",
+          "quantity": 1,
+          "color": "yellow",
+          "printColor": "blue, green",
+          "picture": "locallyGrownPic.jpg"
+      },
+      {
+          "name": "Man Symbol",
+          "itemType": "Infant Onesie",
+          "size": "3-6 months",
+          "price": "$15.00",
+          "quantity": 1,
+          "color": "white",
+          "printColor": "green",
+          "picture": "greenManPic.jpg"
+      },
+      {
+          "name": "locally grown",
+          "itemType": "Infant Onesie",
+          "size": "3-6 months",
+          "price": "$15.00",
+          "quantity": 1,
+          "color": "white",
+          "printColor": "blue, green",
+          "picture": "IMG_2016.jpg"
+      }
+  ]
+} 
