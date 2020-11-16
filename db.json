@@ -9,7 +9,12 @@
           "shopLogoText": "",
           "shopLocation": "Philadelphia, Pennsylvania",
           "shopSales": 0,
-          "faveShop": 0
+          "faveShop": 0,
+          "contactEmail": "rosemary.e.meyers@gmail.com",
+          "contactNumber": 2155551212,
+          "returnPolicy": "No returns accepted due to Covid-19",
+          "shipping": "USPS",
+          "paymentOptions": "paypal"
       }
   ],
   "reviews": [
@@ -34,6 +39,7 @@
   ],
   "shopItem": [
       {
+          "id": 1,
           "name": "10 Fingers 10 Toes I'm Good",
           "itemType": "Infant Onesie",
           "size": "3-6 months",
@@ -44,6 +50,7 @@
           "picture": "10FingersPic.jpg"
       },
       {
+          "id": 2,
           "name": "1/2 Pint",
           "itemType": "Infant Onesie",
           "size": "3-6 months",
@@ -54,6 +61,7 @@
           "picture": "halfPintPic.jpg"
       },
       {
+          "id": 3,
           "name": "offspring",
           "itemType": "Infant Onesie",
           "size": "3-6 months",
@@ -64,6 +72,7 @@
           "picture": "offspringPic.jpg"
       },
       {
+          "id": 4,
           "name": "locally grown",
           "itemType": "Infant Onesie",
           "size": "3-6 months",
@@ -74,6 +83,7 @@
           "picture": "locallyGrownPic.jpg"
       },
       {
+          "id": 5,
           "name": "Man Symbol",
           "itemType": "Infant Onesie",
           "size": "3-6 months",
@@ -84,6 +94,7 @@
           "picture": "greenManPic.jpg"
       },
       {
+          "id": 6,
           "name": "locally grown",
           "itemType": "Infant Onesie",
           "size": "3-6 months",
@@ -91,7 +102,7 @@
           "quantity": 1,
           "color": "white",
           "printColor": "blue, green",
-          "picture": "IMG_2016.jpg"
+          "picture": "locallyGrownPicWhite.jpg"
       }
   ]
 } 
