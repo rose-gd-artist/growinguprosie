@@ -1,4 +1,4 @@
-.indexPage {
+.shopItemDetails {
     width: 100vw;
     display: flex;   
     flex-wrap: wrap;
@@ -6,28 +6,28 @@
     align-content: center;
     padding: 4vw 15vw 0vw;
 }
-.indexItem {
+.itemDetails {
     width: 18vw;
     background-color: #fff;
     margin-bottom: 4vw;
     padding: 1.5vw;
 }
-.indexPic {
+.indexDetailPic {
     width: 15vw;
 }
-.indexItem .indexItemType {
+.itemDetails .itemType {
     color: #00a33d;
     font-size: 1.6vw;
     font-weight: 400;
     text-align: left;
 }
-.indexItem .indexItemDetail {
+.itemDetails .itemDetail {
     color: #00a33d;
     font-size: 1.6vw;
     font-weight: 400;
     text-align: left;
 }
-.indexItem .indexItemPrice {
+.itemDetails .itemPrice {
     color: #00a33d;
     font-size: 1.6vw;
     font-weight: 700;

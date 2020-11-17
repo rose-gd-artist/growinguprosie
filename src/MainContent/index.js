@@ -1,46 +1,56 @@
 import React, {useState, useEffect} from "react";
 import './index.css';
 import IndexItem from "../IndexItem";
-import ItemDetails from "../ItemDetails";
-// import { Link } from "@reach/router";
+import ShopItem from "../ShopItem";
+import { Link } from "@reach/router";
 // import images from './images.js';
 
 const MainContent = (props) => {
 
-    const [responseShopItem, shopIndexItem] = useState([]);
+    //const [responseShopItem, shopIndexItem] = useState([]);
+    const [products, productList] = useState([]);
+    //const [product, productDetail] = useState({});
     //const [shopIndexItemClicked, shopItemDetail] = useState([]);
 
-    useEffect(() => {
+    useEffect(async () => {
         const getItemData = async () => {
-            const response2 = await fetch(`http://www.localhost:3000/shopOwner/1/shopItem`);
-            const responseShopItem = await response2.json();
-            shopIndexItem(responseShopItem);
+            const response = await fetch(`http://www.localhost:3000/shopOwner/1/shopItem`);
+            const responseShopItems = await response.json();
+            return responseShopItems;
+            //shopIndexItem(responseShopItem);
         };
-        getItemData();
+        //getItemData();
+        const products = await getItemData();
+        productList(products);
+
+        // const getItemDetails = async () => {
+        //     const response = await fetch(`http://www.localhost:3000/shopOwner/1/shopItem/${props.shopItemId}`);
+        //     const responseShopItem = await response.json();
+        //     return responseShopItem;
+        //     //shopIndexItem(responseShopItem);
+        // };
+        // //getItemData();
+        // const product = await getItemDetails();
+        // productDetail(product);
     }, []);
 
     return (
         <div className="indexPage">
   
-                {responseShopItem.map((item) => {
+                {products.map((item) => {
 
                     return (
-                        <IndexItem id={item.id} name={item.name} itemType={item.itemType} price={item.price} picture={item.picture} />
-                        // <Link to="/itemDetails" className="itemDetailsLink">
-                        // <div className="indexItem" name={item.name} >
-                        //     <img src={window.location.origin + "/images/" + item.picture} alt={item.name} className="indexPic"/>
-                        //     <p className="indexItemType">{item.itemType}</p>
-                        //     <p className="indexItemDetail">{item.name}</p>
-                        //     <p className="indexItemPrice">{item.price}</p>
-                        // </div>
-                        // </Link>
-                        //<Link to="/">Go Back</Link>
-                        // <div className="itemDetails" name={item.name} >
-                        // <img src={window.location.origin + "/images/" + item.picture} alt={item.name} className="itemPic"/>
-                        // <p className="itemType">{item.itemType}</p>
-                        // <p className="itemDetail">{item.name}</p>
-                        // <p className="itemPrice">{item.price}</p>
-                        // </div>
+                        <Link to={`shopOwner/1/shopItem/${item.id}`} className="indexLink2Item">
+
+                            <div className="indexItem" name={item.name} id={item.id} >
+                                <img src={window.location.origin + "/images/" + item.picture} alt={item.name} className="indexPic"/>
+                                <p>{item.itemType}</p>
+                                <p>{item.name}</p>
+                                <p>{item.price}</p>
+                            </div>
+
+                        </Link>
+
 
                     );
                 })}
