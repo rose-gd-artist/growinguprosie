@@ -6,41 +6,28 @@ import "./index.css";
 
 const ShopItem = (props) => {
 
-    //const [responseShopItem, shopIndexItem] = useState([]);
+    const [product, setProduct] = useState({});
 
-    const [product, productDetail] = useState({});
-
-    useEffect(async (props) => {
+    useEffect(() => {
         
         const getItemDetails = async () => {
-            const response = await fetch(`http://www.localhost:3000/shopOwner/1/shopItem/${props.shopItemId}`);
+            const response = await fetch(`http://www.localhost:3000/shopItem/${props.shopItemId}`);
             const responseShopItem = await response.json();
-            return responseShopItem;
+            setProduct(responseShopItem);
 
         };
-        //getItemDetails();
-        const product = await getItemDetails();
-        productDetail(product);
+        getItemDetails();
     }, []);
        
     return (
 
         <div className="shopItemDetails">
-
-        {product.forEach((shirt) => {
-        
-            return (
-    
-                <div className="itemDetails" name={shirt.name}>
-                <img src={window.location.origin + "/images/" + shirt.picture} alt={shirt.name} className="itemDetailPic"/>
-                <p className="itemType">{shirt.itemType}</p>
-                <p className="itemDetail">{shirt.name}</p>
-                <p className="itemPrice">{shirt.price}</p>
-                </div>
-            );    
-            
-        })}  
-
+            <div className="itemDetails" name={product.name}>
+                <img src={window.location.origin + "/images/" + product.picture} alt={product.name} className="itemDetailPic"/>
+                <p className="itemType">{product.itemType}</p>
+                <p className="itemDetail">{product.name}</p>
+                <p className="itemPrice">{product.price}</p>
+            </div>  
         </div>
     );           
 

@@ -1,18 +1,22 @@
 import './App.css';
 import Header from "./Header";
 import MainContent from "./MainContent";
+import ShopItem from "./ShopItem";
 import Footer from "./Footer";
-import { Link } from "@reach/router";
+import { Router } from "@reach/router";
+//import { Link } from "@reach/router";
 
 function App() {
   return (
     <div className="wrapper">
-    <div className="App">
-      <Header />
-      <Link to="/about">About us</Link>
-      <MainContent />
-      <Footer />
-    </div>
+      <div className="App">
+        <Header />
+        <Router>
+          <MainContent path="/" />
+          <ShopItem path="/shopOwner/1/shopItem/:shopItemId" />
+        </Router>
+        <Footer />
+      </div>
     </div>
   );
 }
