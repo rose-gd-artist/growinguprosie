@@ -27,7 +27,8 @@ const ShopItem = (props) => {
                 <p className="itemType">{product.itemType}</p>
                 <p className="itemDetail">{product.name}</p>
                 <p className="itemPrice">{product.price}</p>
-            </div>  
+                <button onClick={() => props.addToCart(product)}>Add to cart</button>
+            </div>
         </div>
     );           
 

@@ -62,6 +62,7 @@ const Header = (props) => {
             </div>
 
             <div className="headerRightSide">
+                {props.cartCount}
                 <img src={window.location.origin + '/images/shopCart.svg'} alt="shopping cart" className="shopCart"/>
             </div>
         </div>
