@@ -1,168 +1,166 @@
 {
   "shopOwner": [
-      { 
-          "id": 1,
-          "shopName": "growing up rosie",
-          "title": "Owner",
-          "name": "Rosemary Meyers",
-          "shopLogo": "gup_logo.svg" ,
-          "shopLogoText": "gup_logo_text.svg",
-          "shopLocation": "Philadelphia, Pennsylvania",
-          "shopSales": 0,
-          "faveShop": 0,
-          "contactEmail": "rosemary.e.meyers@gmail.com",
-          "contactNumber": 2155551212,
-          "returnPolicy": "No returns accepted due to Covid-19",
-          "exchangePolicy": "Exchanges are only permitted if damaged in shipping",
-          "shipping": "USPS",
-          "shippingZipCode": 19128,
-          "estimatedShipTime": "5 - 7 business days after order is placed",
-          "paymentOptions": "paypal"
-      }
+    {
+      "id": 1,
+      "shopName": "growing up rosie",
+      "title": "Owner",
+      "name": "Rosemary Meyers",
+      "shopLogo": "gup_logo.svg",
+      "shopLogoText": "gup_logo_text.svg",
+      "shopLocation": "Philadelphia, Pennsylvania",
+      "shopSales": 0,
+      "faveShop": 0,
+      "contactEmail": "rosemary.e.meyers@gmail.com",
+      "contactNumber": 2155551212,
+      "returnPolicy": "No returns accepted due to Covid-19",
+      "exchangePolicy": "Exchanges are only permitted if damaged in shipping",
+      "shipping": "USPS",
+      "shippingZipCode": 19128,
+      "estimatedShipTime": "5 - 7 business days after order is placed",
+      "paymentOptions": "paypal"
+    }
   ],
   "reviews": [
-      { 
-          "shopId": 1,
-          "body": "So cute, love it!",
-          "stars": 4,
-          "id": 1
-      },
-      { 
-          "shopId": 1,
-          "body": "Cute for handmade, but it faded in the first wash.",
-          "stars": 2,
-          "id": 2
-      },
-      { 
-          "shopId": 1,
-          "body": "Great gift for my BFF's first baby.",
-          "stars": 5,
-          "id": 3
-      }
+    {
+      "shopId": 1,
+      "body": "So cute, love it!",
+      "stars": 4,
+      "id": 1
+    },
+    {
+      "shopId": 1,
+      "body": "Cute for handmade, but it faded in the first wash.",
+      "stars": 2,
+      "id": 2
+    },
+    {
+      "shopId": 1,
+      "body": "Great gift for my BFF's first baby.",
+      "stars": 5,
+      "id": 3
+    }
   ],
   "shopItem": [
-      {
-          "id": 1,
-          "name": "10 Fingers 10 Toes I'm Good",
-          "itemType": "Infant Onesie",
-          "size": "3-6 months",
-          "price": "$15.00",
-          "quantity": 1,
-          "materialColor": "white",
-          "materialType": "100% Cotton",
-          "printColor": "black, red",
-          "picture": "10FingersPic.jpg",
-          "description": "Unisex Infant Short Sleeve Onesie with silk screen printed graphics"
-      },
-      {
-          "id": 2,
-          "name": "1/2 Pint",
-          "itemType": "Infant Onesie",
-          "size": "3-6 months",
-          "price": "$15.00",
-          "quantity": 1,
-          "materialColor": "white",
-          "materialType": "100% Cotton",
-          "printColor": "blue",
-          "picture": "halfPintPic.jpg",
-          "description": "Infant Short Sleeve Onesie with silk screen printed graphics for boy"
-      },
-      {
-          "id": 3,
-          "name": "offspring",
-          "itemType": "Infant Onesie",
-          "size": "3-6 months",
-          "price": "$15.00",
-          "quantity": 1,
-          "materialColor": "white",
-          "materialType": "100% Cotton",
-          "printColor": "orange",
-          "picture": "offspringPic.jpg",
-          "description": "Unisex Infant Short Sleeve Onesie with silk screen printed graphics"
-      },
-      {
-          "id": 4,
-          "name": "locally grown",
-          "itemType": "Infant Onesie",
-          "size": "3-6 months",
-          "price": "$15.00",
-          "quantity": 1,
-          "materialColor": "yellow",
-          "materialType": "100% Cotton",
-          "printColor": "blue, green",
-          "picture": "locallyGrownPic.jpg",
-          "description": "Unisex Infant Short Sleeve Onesie with silk screen printed graphics"
-      },
-      {
-          "id": 5,
-          "name": "Man Symbol",
-          "itemType": "Infant Onesie",
-          "size": "3-6 months",
-          "price": "$15.00",
-          "quantity": 1,
-          "materialColor": "white",
-          "materialType": "100% Cotton",
-          "printColor": "green",
-          "picture": "greenManPic.jpg",
-          "description": "Infant Short Sleeve Onesie with silk screen printed graphics for boy"
-      },
-      {
-          "id": 6,
-          "name": "locally grown",
-          "itemType": "Infant Onesie",
-          "size": "3-6 months",
-          "price": "$15.00",
-          "quantity": 1,
-          "materialColor": "white",
-          "materialType": "100% Cotton",
-          "printColor": "blue, green",
-          "picture": "locallyGrownPicWhite.jpg",
-          "description": "Unisex Infant Short Sleeve Onesie with silk screen printed graphics"
-      }
+    {
+      "id": 1,
+      "name": "10 Fingers 10 Toes I'm Good",
+      "itemType": "Infant Onesie",
+      "size": "3-6 months",
+      "price": "$15.00",
+      "quantity": 1,
+      "materialColor": "white",
+      "materialType": "100% Cotton",
+      "printColor": "black, red",
+      "picture": "10FingersPic.jpg",
+      "description": "Unisex Infant Short Sleeve Onesie with silk screen printed graphics"
+    },
+    {
+      "id": 2,
+      "name": "1/2 Pint",
+      "itemType": "Infant Onesie",
+      "size": "3-6 months",
+      "price": "$15.00",
+      "quantity": 1,
+      "materialColor": "white",
+      "materialType": "100% Cotton",
+      "printColor": "blue",
+      "picture": "halfPintPic.jpg",
+      "description": "Infant Short Sleeve Onesie with silk screen printed graphics for boy"
+    },
+    {
+      "id": 3,
+      "name": "offspring",
+      "itemType": "Infant Onesie",
+      "size": "3-6 months",
+      "price": "$15.00",
+      "quantity": 1,
+      "materialColor": "white",
+      "materialType": "100% Cotton",
+      "printColor": "orange",
+      "picture": "offspringPic.jpg",
+      "description": "Unisex Infant Short Sleeve Onesie with silk screen printed graphics"
+    },
+    {
+      "id": 4,
+      "name": "locally grown",
+      "itemType": "Infant Onesie",
+      "size": "3-6 months",
+      "price": "$15.00",
+      "quantity": 1,
+      "materialColor": "yellow",
+      "materialType": "100% Cotton",
+      "printColor": "blue, green",
+      "picture": "locallyGrownPic.jpg",
+      "description": "Unisex Infant Short Sleeve Onesie with silk screen printed graphics"
+    },
+    {
+      "id": 5,
+      "name": "Man Symbol",
+      "itemType": "Infant Onesie",
+      "size": "3-6 months",
+      "price": "$15.00",
+      "quantity": 1,
+      "materialColor": "white",
+      "materialType": "100% Cotton",
+      "printColor": "green",
+      "picture": "greenManPic.jpg",
+      "description": "Infant Short Sleeve Onesie with silk screen printed graphics for boy"
+    },
+    {
+      "id": 6,
+      "name": "locally grown",
+      "itemType": "Infant Onesie",
+      "size": "3-6 months",
+      "price": "$15.00",
+      "quantity": 1,
+      "materialColor": "white",
+      "materialType": "100% Cotton",
+      "printColor": "blue, green",
+      "picture": "locallyGrownPicWhite.jpg",
+      "description": "Unisex Infant Short Sleeve Onesie with silk screen printed graphics"
+    }
   ],
-  "shoppingCart":
-  [
-      {
-        "id": "",
-        "name": "",
-        "itemType": "",
-        "size": "",
-        "price": "",
-        "quantity": "",
-        "materialColor": "",
-        "materialType": "",
-        "printColor": "",
-        "picture": "",
-        "description": ""
-      },
-      {
-        "promocode": "",
-        "subtotal": "",
-        "shippingCost": "",
-        "estimateTax": "",
-        "estimatedTotal": ""
-      }
+  "shoppingCart": [
+    {
+      "id": "",
+      "name": "",
+      "itemType": "",
+      "size": "",
+      "price": "",
+      "quantity": "",
+      "materialColor": "",
+      "materialType": "",
+      "printColor": "",
+      "picture": "",
+      "description": ""
+    },
+    {
+      "promocode": "",
+      "subtotal": "",
+      "shippingCost": "",
+      "estimateTax": "",
+      "estimatedTotal": ""
+    }
   ],
-  "checkout":
-  [
-      {
-        "id": "",
-        "name": "",
-        "itemType": "",
-        "size": "",
-        "price": "",
-        "quantity": "",
-        "materialColor": "",
-        "materialType": "",
-        "printColor": "",
-        "picture": "",
-        "description": ""
-      },
-      {
-        "subtotal": "",
-        "shippingCost": "",
-        "zipcodeTax": "",
-        "actualTotal": ""
-      }
+  "checkout": [
+    {
+      "id": "",
+      "name": "",
+      "itemType": "",
+      "size": "",
+      "price": "",
+      "quantity": "",
+      "materialColor": "",
+      "materialType": "",
+      "printColor": "",
+      "picture": "",
+      "description": ""
+    },
+    {
+      "subtotal": "",
+      "shippingCost": "",
+      "zipcodeTax": "",
+      "actualTotal": ""
+    }
   ]
-} 
+}

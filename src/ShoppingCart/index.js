@@ -4,9 +4,10 @@ import "./index.css";
 
 const ShoppingCart = (props) => {
 
-    const [product, setProduct] = useState({});
-    //const [cart, setCart] = useState([]);
+    //const [product, setProduct] = useState({});
+    const [cart, setCart] = useState([]);
     //const [checkoutQuantity, setCheckoutQuantity] = useState({}); // made for checking for length of cart // if 0 button shouldn't work
+
 
     useEffect(() => {
         
@@ -17,32 +18,41 @@ const ShoppingCart = (props) => {
 
         };
         getItemDetails();
-    }, []);
+    }, [cart]);
        
     // const cartEvaluator = (props) => {
-    //     if(cart.length === 0){
+
     //         return (
-    //             <div className="shoppingCartBox">
-    //             <div className="noItemsInCart">
-    //                 There are no items in your cart at this time.
+    //             <div>
+    //                     {cart.map((props) => {
+    //                         <div>
+    //                             <p>{props.name}</p>
+    //                             <p>{props.quantity}</p>
+    //                             <p>{props.price}</p>
+    //                         </div>
+    //                     })}
     //             </div>
-    //             </div>
-
     //         );
-    //     } else {
-    //         return (
-    //             <div className="shoppingCartBox">
-    //             <div className="itemInCart">
-    //             </div>
-
-    //             {/* <Link to={"/shopOwner/1/checkout"} >
-    //             <button onClick={() => setCheckoutQuantity(cart)}>Checkout</button>
-    //             </Link> */}
-    //             </div>
-
-    //         );
-    //     };
     // }
+
+
+
+    // const removeFromCart = (props) => {
+    //     const cartList = [...props.cart];
+    //     cartList = cartList.filter((cartItems) => cartItems.id !== props.cart.id);
+    //     setCart(cartList);
+
+    // };
+
+    // const cartItems = props.cart.map((props) => (
+    //     <div id={props.id}>
+    //         <p>{props.name}</p>
+    //         <p>{props.price}</p>
+    //         <p>{props.quantity}</p>
+    //         <input type="submit" value="remove" onClick={() => removeFromCart(props)}/>
+
+    //     </div>
+    // ));
 
     return (
 
@@ -54,9 +64,7 @@ const ShoppingCart = (props) => {
             <p>Keep Shopping</p>
             </Link>
             <div className="shoppingCartBox">
-                <div className="noItemsInCart">
-                    There are no items in your cart at this time.
-                </div>
+            {props.cart}
             </div>  
         </div>
     );           

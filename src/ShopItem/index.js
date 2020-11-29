@@ -7,6 +7,7 @@ const ShopItem = (props) => {
 
     const [product, setProduct] = useState({});
     const [ownerSpec, setOwnerSpec] = useState({});
+    const [cart, setCart] = useState([]);
 
     useEffect(() => {
         
@@ -23,10 +24,44 @@ const ShopItem = (props) => {
             setOwnerSpec(responseShopOwnerSpecs);
 
         };
+
+        const addToCart = async (itemId, name, itemType, size, price, quantity, materialColor, materialType, printColor, picture, description) => {
+    
+            const addedItem = {
+                itemId,
+                name,
+                itemType,
+                size,
+                price,
+                quantity,
+                materialColor,
+                materialType,
+                printColor,
+                picture,
+                description
+            };
+        
+            await fetch("http://localhost:3000/shoppingCart/", {
+                method: "POST",
+                body: JSON.stringify(addedItem),
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+            });
+    
+            alert('done');
+        };
+
+        addToCart();
         getItemDetails();
         getShopOwnerSpecs();
 
     }, []);
+
+    // const addToCart = (product) => {
+    //     setCart([...cart, product]);
+    // }
        
     return (
 
@@ -34,7 +69,7 @@ const ShopItem = (props) => {
             <Link to="/">
             <p>Back to search results</p>
             </Link>
-            <div className="itemDetails" name={product.name}>
+            <div className="itemDetails" name={product.name} id={product.id}>
                 <div className="leftSideItem">
                 <img src={window.location.origin + "/images/" + product.picture} alt={product.name} className="itemDetailPic"/>
                 </div>
@@ -54,7 +89,7 @@ const ShopItem = (props) => {
                 <p>{product.description}</p>
                 <p>Quantity</p>
                 <p>{product.quantity}</p>
-                <button className="buyNow" onClick={() => props.addToCart(product)}>Buy it now!</button>
+                {/* <button className="buyNow" onClick={() => props.addToCart(product)}>Buy it now!</button> */}
                 <button className="add2Cart" onClick={() => props.addToCart(product)}>Add to Cart</button>
                 <p>Estimated Arrival</p>
                 <p>{ownerSpec.shipping}</p>

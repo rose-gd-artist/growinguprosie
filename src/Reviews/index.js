@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "@reach/router";
+//import { Link } from "@reach/router";
 //import { useForm } from "react-hook-form";
 
 const Reviews = (props) => {
@@ -43,6 +43,38 @@ const Reviews = (props) => {
 
         };
 
+
+        // const createNewReview = async (shopId, stars, body) => {
+    
+        //     const newReview = {
+        //         shopId,
+        //         stars,
+        //         body,
+        //     };
+        
+        //     await fetch("http://localhost:3000/reviews", {
+        //         method: "POST",
+        //         body: JSON.stringify(newReview),
+        //         headers: {
+        //             Accept: "application/json",
+        //             "Content-Type": "application/json",
+        //         },
+        //     });
+    
+        //     alert("Thanks for the review!");
+        // };
+    
+        // const deleteReview = async (reviewsId) => {
+        
+        //     await fetch(`http://localhost:3000/reviews/${reviewsId}`, {
+        //         method: "DELETE"
+        //     });
+    
+        //     alert("Your review has been deleted");
+        // };
+
+        // createNewReview();
+        // deleteReview();
         getReviews();
 
     }, []);
@@ -69,8 +101,8 @@ const Reviews = (props) => {
                     return (
 
                         <div>
-                            <p>{review.stars} stars</p>
-                            <p>{review.body}</p>
+                            <p stars={review.stars}>{review.stars} stars</p>
+                            <p body={review.body}>{review.body}</p>
                         </div>
 
                     );

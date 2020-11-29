@@ -14,19 +14,19 @@ import Footer from "./Footer";
 function App(props) {
 
   const [cart, setCart] = useState([]);
-  // const [checkout, setCheckout] = useState([]);
 
+  console.log(cart);
 
-  const product = (props) => {
-    return (
-      <div className="cartItemBox" id={props.id}>
-      <img src={props.picture} alt={props.name}></img> 
-      <p>{props.name}</p>
-      <p>{props.size}</p>
-      <p>{props.quantity}</p>
-      <p>{props.price}</p>
-      <button>Delete</button></div>);
-  };
+  // const product = (props) => {
+  //   return (
+  //     <div className="cartItemBox" id={props.id}>
+  //     <img src={props.picture} alt={props.name}></img> 
+  //     <p>{props.name}</p>
+  //     <p>{props.size}</p>
+  //     <p>{props.quantity}</p>
+  //     <p>{props.price}</p>
+  //     <button>Delete</button></div>);
+  // };
 
   
 
@@ -34,19 +34,6 @@ function App(props) {
   const addToCart = (product) => {
     setCart([...cart, product]);
   };
-
-  // const goToCheckout = () => {
-  //   setCheckout([...checkout, cart]);
-  // };
-  
-
-  // const addToCart = (product) => {
-  //   setCart([...cart, product]);
-  // };
-
-  // const goToCheckout = () => {
-  //   setCheckout([...checkout, cart]);
-  // };
   
   return (
     <div className="wrapper">
@@ -56,7 +43,7 @@ function App(props) {
           <MainContent path="/" />
           <Reviews path="/reviews" />
           <ShopItem addToCart={addToCart} path="/shopOwner/1/shopItem/:shopItemId" />
-          <ShoppingCart path="/shoppingCart" />
+          <ShoppingCart cart={cart} path="/shoppingCart" />
           {/* <Checkout path="/checkout" /> */}
         </Router>
         <Footer />
