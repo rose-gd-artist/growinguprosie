@@ -10,6 +10,7 @@ import './images/makeFaveShop.svg';
 import './images/unFaveShop.svg';
 import './images/contactButton.svg';
 import './images/shopCart.svg';
+import { Link } from "@reach/router";
 
 
 const Header = (props) => {
@@ -29,14 +30,17 @@ const Header = (props) => {
     return (
         <div className="appHeader">
             <div className="logoLeft">
+                <Link to="/">
                 <img src={window.location.origin + '/images/gup_logo.svg'} alt="growing up rosie logo" className="circleLogo"/>
+                </Link>
                 <p className="shopOwnerTitle">SHOP OWNER</p>
                 <p className="shopOwnerName">{responseShopOwner.name}</p>
                 <img src={window.location.origin + '/images/contactButton.svg'} alt="contact button" className="contactButton"/>
             </div>
             <div className="headerLeftSide">
-
+                <Link to="/">
                 <img src={window.location.origin + '/images/gup_logo_text.svg'} alt="growing up rosie logo" className="textLogo"/>
+                </Link>
                 <div className="locationLine"><img src={window.location.origin + '/images/mapMarker.svg'} alt="map marker for city, state" className="mapMarker"/>
                 <p className="cityState">{responseShopOwner.shopLocation}</p></div>
 
@@ -61,9 +65,14 @@ const Header = (props) => {
                 </div>
             </div>
 
+            <Link to="/shoppingCart" className="unstyleLink">
             <div className="headerRightSide">
+                <div className="countInCart">
+                {props.cartCount} 
+                </div>
                 <img src={window.location.origin + '/images/shopCart.svg'} alt="shopping cart" className="shopCart"/>
             </div>
+            </Link>
         </div>
     );
 };

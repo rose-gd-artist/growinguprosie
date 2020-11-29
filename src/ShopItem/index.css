@@ -1,19 +1,27 @@
 .shopItemDetails {
     width: 100vw;
-    display: flex;   
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: center;
     padding: 4vw 15vw 0vw;
 }
 .itemDetails {
-    width: 18vw;
+    width: 75vw;
+    display: flex;   
+    flex-direction: row;
+    align-content: center;
     background-color: #fff;
     margin-bottom: 4vw;
     padding: 1.5vw;
 }
-.indexDetailPic {
-    width: 15vw;
+.leftSideItem {
+    display: flex;
+    flex-direction: column;
+}
+.itemDetailPic {
+    width: 30vw;
+}
+.rightSideItem {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vw;
 }
 .itemDetails .itemType {
     color: #00a33d;

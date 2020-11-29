@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import './index.css';
 import IndexItem from "../IndexItem";
+import Reviews from "../Reviews";
 import { Link } from "@reach/router";
 
 
@@ -35,6 +36,9 @@ const MainContent = (props) => {
 
                     );
                 })}
+
+                <Reviews />
+
         </div>
 
     );

@@ -105,18 +105,31 @@
     font-weight: 400; 
 }
 .headerRightSide {
-    width: 8.183vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 11.183vw;
     height: 5.71vw;
     border-top-left-radius: 3vw;
     border-bottom-left-radius: 3vw;
     background-color: #d2fcdc;
     top: 15.62vw;
-    right: -54.65vw;
+    left: 51.65vw;
     position: relative;
+}
+.unstyleLink {
+    text-decoration: none;
+}
+.countInCart {
+    color: #ee83b5;
+    font-size: 2.2vw;  
+    font-weight: 400; 
+    margin-top: 1.4vw;
+    margin-left: 2.4vw;
 }
 .shopCart {
     width: 4.043vw;
-    left: 3.2vw;
-    top: 1.45vw;
-    position: relative;
+    position: absolute;
+    top: 1.35vw;
+    right: 1vw;
 }
