@@ -161,7 +161,10 @@ const ShoppingCart = (props) => {
             <p>Keep Shopping</p>
             </Link>
             <div className="shoppingCartBox">
-                <CartItem cart={props.cart} removeFromCart={props.removeFromCart} />
+
+                {props.cart.map((item) => {
+                    <CartItem item={item} removeFromCart={props.removeFromCart} key={item.id} />
+                })}
             </div>  
     
         </div>
