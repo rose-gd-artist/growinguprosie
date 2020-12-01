@@ -10,7 +10,7 @@ const CartItem = (props) => {
             <p className="cartItemDetail">{props.item.name}</p>
             <p className="cartItemQuantity">{props.item.quantity}</p>
             <p className="cartItemPrice">{props.item.price}</p>
-            <input type="submit" value="delete" onClick={() => props.item.removeFromCart(props.item.id)}/>
+            <input type="submit" value="delete" onClick={() => props.removeFromCart(props.item.id)}/>
         </div>
 
     );

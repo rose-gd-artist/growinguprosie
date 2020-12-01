@@ -68,9 +68,34 @@ function App(props) {
 
   console.log(cart);
 
+  const setAlert = (product) => {
+      return (
+        <div>
+          {`Sorry, there only is 1 ${product.name} in stock.`}
+        </div>
+      );
+  };
+
+  const clearAlert = (product) => {
+    return (
+      <div>
+        {("")}
+      </div>
+    );
+  };
+
   const addToCart = (product) => {
     setCart([...cart, product]);
   };
+
+  // const addToCart = (productId) => {
+  //   const product = cart.filter((product) => {
+  //     return (
+  //         product.id === productId
+  //     );
+  //   });
+  //   setCart([...cart, product]);
+  // };
 
   const removeFromCart = (productId) => {
     const revisedCart = cart.filter((product) => {
@@ -79,6 +104,7 @@ function App(props) {
       );
     });
     setCart(revisedCart);
+   //setAlert("");
   };
   
   return (
