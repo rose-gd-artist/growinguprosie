@@ -49,7 +49,7 @@
 import React, { useState, useEffect } from "react";
 import './index.css';
 import IndexItem from "../IndexItem";
-//import Reviews from "../Reviews";
+import Reviews from "../Reviews";
 import { Link } from "@reach/router";
 
 
@@ -81,12 +81,14 @@ const MainContent = (props) => {
 
                         </Link>
 
-
                     );
                 })}
 
+            <Reviews />
 
         </div>
+
+
 
     );
 };

@@ -54,7 +54,7 @@ import './App.css';
 import { Router } from "@reach/router";
 import Header from "./Header";
 import MainContent from "./MainContent";
-//import Reviews from "./Reviews";
+import Reviews from "./Reviews";
 import ShopItem from "./ShopItem";
 import ShoppingCart from "./ShoppingCart";
 //import Checkout from "./Checkout";
@@ -68,6 +68,7 @@ function App(props) {
   const [product, setProduct] = useState({});
 
   console.log(cart);
+
 
   // const setAlert = (product) => {
   //     return (
@@ -114,7 +115,7 @@ function App(props) {
         <Header cartCount={cart.length} />
         <Router>
           <MainContent path="/" />
-          {/* <Reviews path="/reviews" /> */}
+          <Reviews path="/reviews" />
           <ShopItem addToCart={addToCart} path="/shopOwner/1/shopItem/:shopItemId" />
           <ShoppingCart cart={cart} removeFromCart={removeFromCart} path="/shoppingCart" />
           {/* <Checkout path="/checkout" /> */}

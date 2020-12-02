@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-//import Reviews from "../Reviews";
+import Reviews from "../Reviews";
 import { Link } from "@reach/router";
 import "./index.css";
 
@@ -90,7 +90,7 @@ const ShopItem = (props) => {
                 <p>This seller usually responds within 24 hours</p>
                 </div>
             </div>  
-            {/* <Reviews /> */}
+            <Reviews />
         </div>
     );           
 
