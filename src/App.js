@@ -90,23 +90,12 @@ function App(props) {
   };
 
   // const addProductToCart = (product) => {
-  //   props.addToCart(product);
+  //   addToCart(product);
   //   const updatedProduct = {
   //       ...product,
   //       quantity: product.quantity - 1
   //   }
   //   setProduct(updatedProduct)
-  // };
-
-
-
-  // const addToCart = (productId) => {
-  //   const product = cart.filter((product) => {
-  //     return (
-  //         product.id === productId
-  //     );
-  //   });
-  //   setCart([...cart, product]);
   // };
 
   const removeFromCart = (productId) => {

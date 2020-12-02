@@ -24,19 +24,28 @@ const ShopItem = (props) => {
 
         };
 
-        const addProductToCart = () => {
-            props.addToCart(product);
-            const updatedProduct = {
-                ...product,
-                quantity: product.quantity - 1
-            }
-            setProduct(updatedProduct)
-        };
+        // const addProductToCart = () => {
+        //     props.addToCart(product);
+        //     const updatedProduct = {
+        //         ...product,
+        //         quantity: product.quantity - 1
+        //     }
+        //     setProduct(updatedProduct)
+        // };
 
         getItemDetails();
         getShopOwnerSpecs();
 
     }, []);
+
+    const addProductToCart = () => {
+        props.addToCart(product);
+        const updatedProduct = {
+            ...product,
+            quantity: product.quantity - 1
+        }
+        setProduct(updatedProduct)
+    };
 
        
     return (
