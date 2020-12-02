@@ -35,7 +35,7 @@ const Header = (props) => {
                 </Link>
                 <p className="shopOwnerTitle">SHOP OWNER</p>
                 <p className="shopOwnerName">{responseShopOwner.name}</p>
-                <img src={window.location.origin + '/images/contactButton.svg'} alt="contact button" className="contactButton"/>
+                <a href="mailto: rosemary.e.meyers@gmail.com"><img src={window.location.origin + '/images/contactButton.svg'} alt="contact button" className="contactButton"/></a>
             </div>
             <div className="headerLeftSide">
                 <Link to="/">

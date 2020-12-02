@@ -86,7 +86,7 @@ const ShopItem = (props) => {
                 <p>0</p>
                 <p>Based in</p>
                 <p>Philadelphia, Pennsylvania</p>
-                <button>Message Rosemary</button>
+                <a href="mailto: rosemary.e.meyers@gmail.com"><button>Message Rosemary</button></a>
                 <p>This seller usually responds within 24 hours</p>
                 </div>
             </div>  
