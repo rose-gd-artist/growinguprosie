@@ -24,10 +24,20 @@ const ShopItem = (props) => {
 
         };
 
+        const addProductToCart = () => {
+            props.addToCart(product);
+            const updatedProduct = {
+                ...product,
+                quantity: product.quantity - 1
+            }
+            setProduct(updatedProduct)
+        };
+
         getItemDetails();
         getShopOwnerSpecs();
 
     }, []);
+
        
     return (
 
@@ -56,7 +66,8 @@ const ShopItem = (props) => {
                 <p>Quantity</p>
                 <p>{product.quantity}</p>
                 {/* <button className="buyNow" onClick={() => props.addToCart(product)}>Buy it now!</button> */}
-                <button className="add2Cart" onClick={() => props.addToCart(product)} >Add to Cart</button>
+                {product.quantity > 0 ? <button className="add2Cart" onClick={addProductToCart} >Add to Cart</button> : <p>Out of stock</p>}
+                {/* <button className="add2Cart" onClick={() => props.addToCart(product)} >Add to Cart</button> */}
                 <p>Estimated Arrival</p>
                 <p>{ownerSpec.shipping}</p>
                 <button>View shop policies</button>

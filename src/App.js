@@ -65,28 +65,40 @@ import Footer from "./Footer";
 function App(props) {
 
   const [cart, setCart] = useState([]);
+  const [product, setProduct] = useState({});
 
   console.log(cart);
 
-  const setAlert = (product) => {
-      return (
-        <div>
-          {`Sorry, there only is 1 ${product.name} in stock.`}
-        </div>
-      );
-  };
+  // const setAlert = (product) => {
+  //     return (
+  //       <div>
+  //         {`Sorry, there only is 1 ${product.name} in stock.`}
+  //       </div>
+  //     );
+  // };
 
-  const clearAlert = (product) => {
-    return (
-      <div>
-        {("")}
-      </div>
-    );
-  };
+  // const clearAlert = (product) => {
+  //   return (
+  //     <div>
+  //       {("")}
+  //     </div>
+  //   );
+  // };
 
   const addToCart = (product) => {
     setCart([...cart, product]);
   };
+
+  // const addProductToCart = (product) => {
+  //   props.addToCart(product);
+  //   const updatedProduct = {
+  //       ...product,
+  //       quantity: product.quantity - 1
+  //   }
+  //   setProduct(updatedProduct)
+  // };
+
+
 
   // const addToCart = (productId) => {
   //   const product = cart.filter((product) => {
