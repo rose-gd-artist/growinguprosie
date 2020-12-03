@@ -126,8 +126,6 @@
 // export default Reviews;
 
 import React, { useState, useEffect } from "react";
-//import { Link } from "@reach/router";
-//import { useForm } from "react-hook-form";
 
 const Reviews = (props) => {
 
@@ -154,25 +152,7 @@ const Reviews = (props) => {
         getShopOwnerInfo();
         getReviews();
 
-        // console.log(starMapper);
-
     }, []);
-
-    const overallStarRating = reviews.map((shopOwner) => {
-
-        const starMapper = reviews.map((review) => {
-            return review.stars;
-        });
-    
-        const starAverageRating = starMapper.reduce((a, b) => (a + b), 0) / starMapper.length;
-
-        return {
-          ...shopOwner,
-          starAverageRating
-
-        };
-
-    });
 
 
     return (
@@ -190,7 +170,6 @@ const Reviews = (props) => {
 
                     );
                 })}
-                {/* <div>{overallStarRating}</div> */}
 
         </div>
 

@@ -36,25 +36,11 @@ const Header = (props) => {
 
     }, []);
 
-    
-        //    { const doMath = reviews.map((review) => {
-        //     const average = review.stars.reduce((a, b) => (a + b), 0) /review.stars.length;
-        //     }
-    
-
-    // const starAverageRating = () => {
-    //     return getStarValues.reduce((a, b) => (a + b), 0) / getStarValues.length;
-    // };
-
-    // const starAveragePush = () => {
-    //     const pushMe = shopOwnerInfo.map(() =>{
-    //     return {
-    //         [...shopOwnerInfo,
-    //         starAverageRating]
-    //     };
-    // })};
-
-    // starAveragePush();
+    const getAverage = (reviews) => {
+        reviews.map((review) => {
+            return review.stars.reduce((a.review.stars, b.review.stars => (a.review.stars + b.review.stars), 0) / review.stars.length;
+        });
+    };
 
 
     return (
@@ -80,18 +66,11 @@ const Header = (props) => {
 
                 <div className="starsLine">
                         
-           {reviews.map((review) {
-                const shopReviews = [...shopOwnerInfo]
-                const getStars = reviews.filter((review) => {review.stars})
-                const average = getStars.reduce((a, b) => (a + b), 0) /getStars.length;
-                shopReviews = shopOwnerInfo.map((average) => ({...shopReviews, average}))
-                return (
+
                 <div>
-                    <p className="totalReviewsTally">{shopReviews} {reviews.length}</p>
+                    <p className="totalReviewsTally">Average: {getAverage(reviews.stars)} {reviews.length}</p>
                 </div>
-                );
-                })
-            }
+
 
                 </div>
 
