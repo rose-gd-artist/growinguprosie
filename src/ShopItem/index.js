@@ -61,7 +61,7 @@ const ShopItem = (props) => {
                 <div className="rightSideItem">
                 <p className="itemType">{product.itemType}</p>
                 <p className="itemDetail">{product.name}</p>
-                <p className="itemPrice">{product.price}</p>
+                <p className="itemPrice">$ {product.price}</p>
                 <p>Material</p>
                 <p>{product.materialType}</p>
                 <p>Fabric Color</p>

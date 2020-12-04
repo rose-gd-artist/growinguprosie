@@ -10,7 +10,7 @@ const IndexItem = (props) => {
                 <img src={window.location.origin + "/images/" + props.picture} alt={props.name} className="indexPic"/>
                 <p className="indexItemType">{props.itemType}</p>
                 <p className="indexItemDetail">{props.name}</p>
-                <p className="indexItemPrice">{props.price}</p>
+                <p className="indexItemPrice">$ {props.price}</p>
             </div>
 
         );

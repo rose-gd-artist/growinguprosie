@@ -7,6 +7,11 @@ const ShoppingCart = (props) => {
 
     const [product, setProduct] = useState({});
     const [cart, setCart] = useState([]);
+    const [total, setTotal] = useState(0);
+
+    const getTotal = () => {
+
+    };
 
 
 
