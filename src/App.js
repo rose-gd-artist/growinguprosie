@@ -1,55 +1,4 @@
-// import React, { useState } from "react";
-// import './App.css';
-// import { Router } from "@reach/router";
-// import Header from "./Header";
-// import MainContent from "./MainContent";
-// import Reviews from "./Reviews";
-// import ShopItem from "./ShopItem";
-// import ShoppingCart from "./ShoppingCart";
-// //import Checkout from "./Checkout";
-// import Footer from "./Footer";
-
-
-
-// function App(props) {
-
-//   const [cart, setCart] = useState([]);
-
-//   console.log(cart);
-
-//   const addToCart = (product) => {
-//     setCart([...cart, product]);
-//   };
-
-//   const removeFromCart = (productId) => {
-//     const revisedCart = cart.filter((product) => {
-//       return (
-//           product.id !== productId
-//       );
-//     });
-//     setCart(revisedCart);
-//   };
-  
-//   return (
-//     <div className="wrapper">
-//       <div className="App">
-//         <Header cartCount={cart.length} />
-//         <Router>
-//           <MainContent path="/" />
-//           <Reviews path="/reviews" />
-//           <ShopItem addToCart={addToCart} path="/shopOwner/1/shopItem/:shopItemId" />
-//           <ShoppingCart cart={cart} removeFromCart={removeFromCart} path="/shoppingCart" />
-//           {/* <Checkout path="/checkout" /> */}
-//         </Router>
-//         <Footer />
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './App.css';
 import { Router } from "@reach/router";
 import Header from "./Header";
@@ -65,39 +14,38 @@ import Footer from "./Footer";
 function App(props) {
 
   const [cart, setCart] = useState([]);
-  const [product, setProduct] = useState({});
-
-  console.log(cart);
+  const [products, setProducts] = useState([]);
 
 
-  // const setAlert = (product) => {
-  //     return (
-  //       <div>
-  //         {`Sorry, there only is 1 ${product.name} in stock.`}
-  //       </div>
-  //     );
-  // };
+  useEffect(() => {
+      const getItemData = async () => {
+          const response = await fetch("http://www.localhost:3000/shopOwner/1/shopItem");
+          const responseShopItems = await response.json();
+          setProducts(responseShopItems);
+      };
+      getItemData();
 
-  // const clearAlert = (product) => {
-  //   return (
-  //     <div>
-  //       {("")}
-  //     </div>
-  //   );
-  // };
+  }, []);
+
 
   const addToCart = (product) => {
     setCart([...cart, product]);
   };
 
-  // const addProductToCart = (product) => {
-  //   addToCart(product);
-  //   const updatedProduct = {
-  //       ...product,
-  //       quantity: product.quantity - 1
-  //   }
-  //   setProduct(updatedProduct)
-  // };
+  const addProductToCart = (addedProduct) => {
+    addToCart(addedProduct);
+    const updatedProducts = products.map((product) => {
+      if(product.id === addedProduct.id){
+        return {
+          ...product,
+          quantity: product.quantity - 1
+        }
+      } else {
+        return product;
+      }
+    });
+    setProducts(updatedProducts);
+  };
 
   const removeFromCart = (productId) => {
     const revisedCart = cart.filter((product) => {
@@ -106,7 +54,17 @@ function App(props) {
       );
     });
     setCart(revisedCart);
-   //setAlert("");
+    const updatedProducts = products.map((product) => {
+      if(product.id === productId){
+        return {
+          ...product,
+          quantity: product.quantity + 1
+        }
+      } else {
+        return product;
+      }
+    });
+    setProducts(updatedProducts);
   };
   
   return (
@@ -114,9 +72,9 @@ function App(props) {
       <div className="App">
         <Header cartCount={cart.length} />
         <Router>
-          <MainContent path="/" />
+          <MainContent path="/" products={products} />
           <Reviews path="/reviews" />
-          <ShopItem addToCart={addToCart} path="/shopOwner/1/shopItem/:shopItemId" />
+          <ShopItem products={products} addProductToCart={addProductToCart} path="/shopOwner/1/shopItem/:shopItemId" />
           <ShoppingCart cart={cart} removeFromCart={removeFromCart} path="/shoppingCart" />
           {/* <Checkout path="/checkout" /> */}
         </Router>

@@ -5,17 +5,13 @@ import "./index.css";
 
 const ShopItem = (props) => {
 
-    const [product, setProduct] = useState({});
     const [ownerSpec, setOwnerSpec] = useState({});
 
-    useEffect(() => {
-        
-        const getItemDetails = async () => {
-            const response = await fetch(`http://www.localhost:3000/shopItem/${props.shopItemId}`);
-            const responseShopItem = await response.json();
-            setProduct(responseShopItem);
+    const product = props.products.find((product) => {
+        return product.id === parseInt(props.shopItemId)
+    });
 
-        };
+    useEffect(() => {
 
         const getShopOwnerSpecs = async () => {
             const response = await fetch("http://www.localhost:3000/shopOwner/");
@@ -24,29 +20,9 @@ const ShopItem = (props) => {
 
         };
 
-        // const addProductToCart = () => {
-        //     props.addToCart(product);
-        //     const updatedProduct = {
-        //         ...product,
-        //         quantity: product.quantity - 1
-        //     }
-        //     setProduct(updatedProduct)
-        // };
-
-        getItemDetails();
         getShopOwnerSpecs();
 
     }, []);
-
-    const addProductToCart = () => {
-        props.addToCart(product);
-        const updatedProduct = {
-            ...product,
-            quantity: product.quantity - 1
-        }
-        setProduct(updatedProduct)
-    };
-
        
     return (
 
@@ -75,7 +51,7 @@ const ShopItem = (props) => {
                 <p>Quantity</p>
                 <p>{product.quantity}</p>
                 {/* <button className="buyNow" onClick={() => props.addToCart(product)}>Buy it now!</button> */}
-                {product.quantity > 0 ? <button className="add2Cart" onClick={addProductToCart} >Add to Cart</button> : <p>Out of stock</p>}
+                {product.quantity > 0 ? <button className="add2Cart" onClick={() => props.addProductToCart(product)} >Add to Cart</button> : <p>Out of stock</p>}
                 {/* <button className="add2Cart" onClick={() => props.addToCart(product)} >Add to Cart</button> */}
                 <p>Estimated Arrival</p>
                 <p>{ownerSpec.shipping}</p>
