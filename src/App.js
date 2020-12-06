@@ -75,7 +75,7 @@ function App(props) {
           <MainContent path="/" products={products} />
           <Reviews path="/reviews" />
           <ShopItem products={products} addProductToCart={addProductToCart} path="/shopOwner/1/shopItem/:shopItemId" />
-          <ShoppingCart cart={cart} removeFromCart={removeFromCart} path="/shoppingCart" />
+          <ShoppingCart cart={cart} products={products} removeFromCart={removeFromCart} path="/shoppingCart" />
           {/* <Checkout path="/checkout" /> */}
         </Router>
         <Footer />

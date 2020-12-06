@@ -94,17 +94,9 @@ const Header = (props) => {
                 <div className="starsLine">
                         
 
-                {/* <div>
-                    <p className="totalReviewsTally">Average: {getAverage(reviews.stars)} {reviews.length}</p>
-                </div> */}
-
             <div>
             <p className="totalReviewsTally">Average Rating:    {getAverage(reviews)}       ({reviews.length})</p>
             </div>
-{/* 
-                <div>
-                    <p className="totalReviewsTally">{`Average: ${reviews.stars} (${reviewLength})`}</p>
-                </div> */}
 
                 </div>
 

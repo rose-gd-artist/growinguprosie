@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import './index.css';
 import IndexItem from "../IndexItem";
 import Reviews from "../Reviews";
@@ -10,12 +10,12 @@ const MainContent = (props) => {
     return (
         <div className="indexPage">
   
-                {props.products.map((item) => {
+                {props.products.map((product) => {
 
                     return (
-                        <Link to={`shopOwner/1/shopItem/${item.id}`} className="indexLink2Item">
+                        <Link to={`shopOwner/1/shopItem/${product.id}`} className="indexLink2Item">
 
-                            <IndexItem {...item} />
+                            <IndexItem {...product} />
 
                         </Link>
 

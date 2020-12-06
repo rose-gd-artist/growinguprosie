@@ -6,9 +6,10 @@ import "./index.css";
 const ShopItem = (props) => {
 
     const [ownerSpec, setOwnerSpec] = useState({});
+    const [products, setProducts] = useState({});
 
     const product = props.products.find((product) => {
-        return product.id === parseInt(props.shopItemId)
+        return product.id === parseInt(props.shopItemId);
     });
 
     useEffect(() => {
@@ -30,28 +31,28 @@ const ShopItem = (props) => {
             <Link to="/">
             <p>Back to search results</p>
             </Link>
-            <div className="itemDetails" name={product.name} key={product.id}>
+            <div className="itemDetails" name={props.name} id={props.id}>
                 <div className="leftSideItem">
-                <img src={window.location.origin + "/images/" + product.picture} alt={product.name} className="itemDetailPic"/>
+                <img src={window.location.origin + "/images/" + props.picture} alt={props.name} className="itemDetailPic"/>
                 </div>
                 <div className="rightSideItem">
-                <p className="itemType">{product.itemType}</p>
-                <p className="itemDetail">{product.name}</p>
-                <p className="itemPrice">$ {product.price}</p>
+                <p className="itemType">{props.itemType}</p>
+                <p className="itemDetail">{props.name}</p>
+                <p className="itemPrice">$ {props.price}</p>
                 <p>Material</p>
-                <p>{product.materialType}</p>
+                <p>{props.materialType}</p>
                 <p>Fabric Color</p>
-                <p>{product.materialColor}</p>
+                <p>{props.materialColor}</p>
                 <p>Print Colors</p>
-                <p>{product.printColor}</p>
+                <p>{props.printColor}</p>
                 <p>Size</p>
-                <p>{product.size} in US Numeric Sizing</p>
+                <p>{props.size} in US Numeric Sizing</p>
                 <p>Description</p>
-                <p>{product.description}</p>
+                <p>{props.description}</p>
                 <p>Quantity</p>
-                <p>{product.quantity}</p>
+                <p>{props.quantity}</p>
                 {/* <button className="buyNow" onClick={() => props.addToCart(product)}>Buy it now!</button> */}
-                {product.quantity > 0 ? <button className="add2Cart" onClick={() => props.addProductToCart(product)} >Add to Cart</button> : <p>Out of stock</p>}
+                {props.quantity > 0 ? <button className="add2Cart" onClick={() => props.addProductToCart(product)} >Add to Cart</button> : <p>Out of stock</p>}
                 {/* <button className="add2Cart" onClick={() => props.addToCart(product)} >Add to Cart</button> */}
                 <p>Estimated Arrival</p>
                 <p>{ownerSpec.shipping}</p>

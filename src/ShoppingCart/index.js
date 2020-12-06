@@ -7,11 +7,11 @@ const ShoppingCart = (props) => {
 
     const [product, setProduct] = useState({});
     const [cart, setCart] = useState([]);
-    const [total, setTotal] = useState(0);
+    //const [total, setTotal] = useState(0);
 
-    const getTotal = () => {
+    // const getTotal = () => {
 
-    };
+    // };
 
 
 
@@ -25,16 +25,6 @@ const ShoppingCart = (props) => {
         getItemData();
 
     }, []);
-       
-    const removeFromCart = (productId) => {
-        const revisedCart = cart.filter((product) => {
-          return (
-              product.id !== productId
-          );
-        });
-        setCart(revisedCart);
-    };
-
 
     return (
 
@@ -44,8 +34,8 @@ const ShoppingCart = (props) => {
             </Link>
             <div className="shoppingCartBox">
 
-                {props.cart.map((item) => {
-                    return <CartItem item={item} removeFromCart={props.removeFromCart} key={item.id} />
+                {props.cart.map((product) => {
+                    return <CartItem product={product} removeFromCart={props.removeFromCart} key={product.id} />
                 })}
             </div>  
     
