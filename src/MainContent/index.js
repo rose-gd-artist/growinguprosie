@@ -15,7 +15,7 @@ const MainContent = (props) => {
                     return (
                         <Link to={`shopOwner/1/shopItem/${product.id}`} className="indexLink2Item">
 
-                            <IndexItem {...product} />
+                            <IndexItem {...product} addProductToCart={props.addProductToCart} />
 
                         </Link>
 

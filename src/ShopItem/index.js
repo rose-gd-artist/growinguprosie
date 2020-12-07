@@ -12,6 +12,8 @@ const ShopItem = (props) => {
         return product.id === parseInt(props.shopItemId);
     });
 
+    props = {...product};
+
     useEffect(() => {
 
         const getShopOwnerSpecs = async () => {
@@ -24,6 +26,7 @@ const ShopItem = (props) => {
         getShopOwnerSpecs();
 
     }, []);
+
        
     return (
 
@@ -31,7 +34,7 @@ const ShopItem = (props) => {
             <Link to="/">
             <p>Back to search results</p>
             </Link>
-            <div className="itemDetails" name={props.name} id={props.id}>
+            <div className="itemDetails" name={props.name} key={props.id}>
                 <div className="leftSideItem">
                 <img src={window.location.origin + "/images/" + props.picture} alt={props.name} className="itemDetailPic"/>
                 </div>
@@ -51,9 +54,9 @@ const ShopItem = (props) => {
                 <p>{props.description}</p>
                 <p>Quantity</p>
                 <p>{props.quantity}</p>
-                {/* <button className="buyNow" onClick={() => props.addToCart(product)}>Buy it now!</button> */}
+
                 {props.quantity > 0 ? <button className="add2Cart" onClick={() => props.addProductToCart(product)} >Add to Cart</button> : <p>Out of stock</p>}
-                {/* <button className="add2Cart" onClick={() => props.addToCart(product)} >Add to Cart</button> */}
+
                 <p>Estimated Arrival</p>
                 <p>{ownerSpec.shipping}</p>
                 <button>View shop policies</button>
