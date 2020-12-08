@@ -21,27 +21,33 @@ const ShoppingCart = (props) => {
 
     }, []);
 
-    const getTotal = props.cart.map((item) => {
-        return total = item.price * cart.length;
-    });
-    setTotal(getTotal);
+
+    const getTotal = () => {
+        return props.cart.forEach((item) => {
+            return total += item.price * item.quantity;
+        });
+    };
+
+
 
     return (
+
 
         <div className="shoppingCartBackground">
             <Link to="/">
             <p>Back to search results</p>
             </Link>
             <div className="shoppingCartBox">
+                {console.log(getTotal)}
 
                 {props.cart.map((item) => {
                     return <CartItem item={item} removeFromCart={props.removeFromCart} key={item.id} price={item.price} />
                 })}
                 {props.cart.length}
-                {getTotal}
+                {props.cart.price}
             </div>  
             <div>
-            <p>Total: $ {getTotal}</p>
+            <p>Total: $ </p>
             </div>
     
         </div>
