@@ -15,6 +15,8 @@ function App(props) {
 
   const [cart, setCart] = useState([]);
   const [products, setProducts] = useState([]);
+  const [price, setPrice] = useState({});
+  const [total, setTotal] = useState(0);
 
 
   useEffect(() => {
@@ -66,6 +68,13 @@ function App(props) {
     });
     setProducts(updatedProducts);
   };
+
+  const getTotal = () => {
+    const cartTotal = cart.reduce((prev, curr) => (curr.price + prev), 0);
+    setTotal(cartTotal);
+  };
+
+  
   
   return (
     <div className="wrapper">
@@ -76,7 +85,6 @@ function App(props) {
           <Reviews path="/reviews" />
           <ShopItem products={products} addProductToCart={addProductToCart} path="/shopOwner/1/shopItem/:shopItemId" />
           <ShoppingCart cart={cart} products={products} removeFromCart={removeFromCart} path="/shoppingCart" />
-          {/* <Checkout path="/checkout" /> */}
         </Router>
         <Footer />
       </div>

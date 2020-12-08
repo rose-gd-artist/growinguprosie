@@ -12,8 +12,6 @@ const ShopItem = (props) => {
         return product.id === parseInt(props.shopItemId);
     });
 
-    props = {...product};
-
     useEffect(() => {
 
         const getShopOwnerSpecs = async () => {
@@ -27,6 +25,10 @@ const ShopItem = (props) => {
 
     }, []);
 
+    if (!product) {
+        return null
+    }
+
        
     return (
 
@@ -34,28 +36,28 @@ const ShopItem = (props) => {
             <Link to="/">
             <p>Back to search results</p>
             </Link>
-            <div className="itemDetails" name={props.name} key={props.id}>
+            <div className="itemDetails" name={product.name} key={product.id}>
                 <div className="leftSideItem">
-                <img src={window.location.origin + "/images/" + props.picture} alt={props.name} className="itemDetailPic"/>
+                <img src={window.location.origin + "/images/" + product.picture} alt={product.name} className="itemDetailPic"/>
                 </div>
                 <div className="rightSideItem">
-                <p className="itemType">{props.itemType}</p>
-                <p className="itemDetail">{props.name}</p>
-                <p className="itemPrice">$ {props.price}</p>
+                <p className="itemType">{product.itemType}</p>
+                <p className="itemDetail">{product.name}</p>
+                <p className="itemPrice">$ {product.price}</p>
                 <p>Material</p>
-                <p>{props.materialType}</p>
+                <p>{product.materialType}</p>
                 <p>Fabric Color</p>
-                <p>{props.materialColor}</p>
+                <p>{product.materialColor}</p>
                 <p>Print Colors</p>
-                <p>{props.printColor}</p>
+                <p>{product.printColor}</p>
                 <p>Size</p>
-                <p>{props.size} in US Numeric Sizing</p>
+                <p>{product.size} in US Numeric Sizing</p>
                 <p>Description</p>
-                <p>{props.description}</p>
+                <p>{product.description}</p>
                 <p>Quantity</p>
-                <p>{props.quantity}</p>
+                <p>{product.quantity}</p>
 
-                {props.quantity > 0 ? <button className="add2Cart" onClick={() => props.addProductToCart(product)} >Add to Cart</button> : <p>Out of stock</p>}
+                {product.quantity > 0 ? <button className="add2Cart" onClick={() => props.addProductToCart(product)} >Add to Cart</button> : <p>Out of stock</p>}
 
                 <p>Estimated Arrival</p>
                 <p>{ownerSpec.shipping}</p>

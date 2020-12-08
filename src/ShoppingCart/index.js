@@ -7,12 +7,7 @@ const ShoppingCart = (props) => {
 
     const [product, setProduct] = useState({});
     const [cart, setCart] = useState([]);
-    //const [total, setTotal] = useState(0);
-
-    // const getTotal = () => {
-
-    // };
-
+    const [total, setTotal] = useState(0);
 
 
 
@@ -26,6 +21,11 @@ const ShoppingCart = (props) => {
 
     }, []);
 
+    const getTotal = props.cart.map((item) => {
+        return total = item.price * cart.length;
+    });
+    setTotal(getTotal);
+
     return (
 
         <div className="shoppingCartBackground">
@@ -34,10 +34,15 @@ const ShoppingCart = (props) => {
             </Link>
             <div className="shoppingCartBox">
 
-                {props.cart.map((product) => {
-                    return <CartItem product={props.product} removeFromCart={props.removeFromCart} key={props.id} />
+                {props.cart.map((item) => {
+                    return <CartItem item={item} removeFromCart={props.removeFromCart} key={item.id} price={item.price} />
                 })}
+                {props.cart.length}
+                {getTotal}
             </div>  
+            <div>
+            <p>Total: $ {getTotal}</p>
+            </div>
     
         </div>
     );           
