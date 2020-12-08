@@ -126,6 +126,7 @@
 // export default Reviews;
 
 import React, { useState, useEffect } from "react";
+import "./index.css";
 
 const Reviews = (props) => {
 
@@ -158,14 +159,18 @@ const Reviews = (props) => {
     return (
 
         <div className="reviewSection">
+
+            <p className="reviewHeader">Reviews</p>
+
+                <div className="dividerLine"></div>
   
                 {reviews.map((review) => {
 
                     return (
 
-                        <div>
-                            <p>{review.stars} stars</p>
-                            <p>{review.text}</p>
+                        <div className="reviewBox">
+                            <p className="reviewStars">{review.stars} stars</p>
+                            <p className="reviewText">{review.text}</p>
                         </div>
 
                     );

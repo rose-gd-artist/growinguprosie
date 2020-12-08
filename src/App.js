@@ -67,6 +67,8 @@ function App(props) {
   };
 
   const cartTotal = cart.reduce((total, { price = 0 }) => total + price, 0);
+
+
   
   return (
     <div className="wrapper">

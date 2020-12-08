@@ -117,7 +117,7 @@
     left: 51.65vw;
     position: relative;
 }
-.unstyleLink {
+.noUnderlineLink {
     text-decoration: none;
 }
 .countInCart {

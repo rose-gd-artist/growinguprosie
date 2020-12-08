@@ -17,6 +17,7 @@ const Header = (props) => {
 
     const [shopOwnerInfo, setShopOwnerInfo] = useState([]);
     const [reviews, setReviews] = useState([]);
+    //const [fave, setFave] = useState(0);
 
     useEffect(() => {
         const getJsonOwnerData = async () => {
@@ -53,6 +54,25 @@ const Header = (props) => {
             })
 
     };
+
+
+    // const makeMyFave = () => {
+    //     if(clicked){
+    //         setFave({
+    //             ...shopOwnerInfo, 
+    //             faveShop: shopOwnerInfo.faveShop + 1
+    //         });
+
+    //     } else if (!clicked){
+    //         fave({
+    //                 ...shopOwnerInfo,
+    //                 faveShop: shopOwnerInfo.faveShop - 1
+    //         });
+
+    //     } else {
+    //         return null;
+    //     }
+    // };
      
 
     return (
@@ -73,26 +93,23 @@ const Header = (props) => {
                 <div className="locationLine"><img src={window.location.origin + '/images/mapMarker.svg'} alt="map marker for city, state" className="mapMarker"/>
                 <p className="cityState">{shopOwnerInfo.shopLocation}</p></div>
 
-                <div className="salesLine">
+                {/* <div className="salesLine">
                     <p className="saleNumber">0 Sales</p>
-                </div>
+                </div> */}
 
                 <div className="starsLine">
-                        
-
-            <div>
-            <p className="totalReviewsTally">Average Rating:    {getAverage(reviews)}       ({reviews.length})</p>
-            </div>
-
-                </div>
-
-                <div className="faveShop">
-                    <img src={window.location.origin + '/images/unFaveShop.svg'} alt="Click heart to make this your favorite shop" className="faveShopOpenHeart"/>
-                    <p className="faveShopTally">Favorite Shop (0)</p>
+                    <Link to="/reviews" className="noUnderlineLink">
+                        <div>
+                            <p className="totalReviewsTally">Average Rating:    {getAverage(reviews)}       ({reviews.length})</p>
+                        </div>
+                    </Link>
                 </div>
             </div>
 
-            <Link to="/shoppingCart" className="unstyleLink">
+                {/* <div className="faveShop" {onClick={((el) => el.target.value === fave ? <img src={window.location.origin + '/images/unFaveShop.svg'} alt="Click open heart to make this your favorite shop" className="faveShopOpenHeart"/><p className="faveShopTally">Favorite Shop ({makeMyFave})</p> : <img src={window.location.origin + '/images/makeFaveShop.svg'} alt="Click solid heart to not make this your favorite shop" className="faveShopOpenHeart"/><p className="faveShopTally">Favorite Shop ({makeMyFave})</p>)} /> */}
+                
+
+            <Link to="/shoppingCart" className="noUnderlineLink">
             <div className="headerRightSide">
                 <div className="countInCart">
                 {props.cartCount} 

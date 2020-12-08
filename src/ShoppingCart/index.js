@@ -21,7 +21,7 @@ const ShoppingCart = (props) => {
 
 
         <div className="shoppingCartBackground">
-            <Link to="/">
+            <Link to="/" className="noUnderlineLink">
             <p className="noUnderlineLink">Back to search results</p>
             </Link>
 
@@ -35,7 +35,7 @@ const ShoppingCart = (props) => {
                 })}
             </div>  
             <div>
-            <p className="cartTotal">Total: $ {props.cartTotal}</p>
+            {props.cart.length === 0 ? <p className="emptyCart">Your cart is currently empty</p> : <p className="cartTotal">Total: $ {props.cartTotal}</p>}
             </div>
     
         </div>
