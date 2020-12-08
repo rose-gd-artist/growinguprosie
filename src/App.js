@@ -15,10 +15,6 @@ function App(props) {
 
   const [cart, setCart] = useState([]);
   const [products, setProducts] = useState([]);
-  // const [cartTotal, setCartTotal] = useState(0);
-  // const [price, setPrice] = useState({});
-  // const [total, setTotal] = useState(0);
-
 
   useEffect(() => {
       const getItemData = async () => {
@@ -70,19 +66,6 @@ function App(props) {
     setProducts(updatedProducts);
   };
 
-  // const getTotal = () => {
-  //   const cartTotal = cart.reduce((prev, curr) => (curr.price + prev), 0);
-  //   setTotal(cartTotal);
-  // };
-
-  // const total = () => {
-  //   let totalVal = 0;
-  //     for (let i = 0; i < cart.length; i++) {
-  //       totalVal += cart[i].price;
-  //     }
-  //     setCartTotal(totalVal);
-  // };
-  
   const cartTotal = cart.reduce((total, { price = 0 }) => total + price, 0);
   
   return (

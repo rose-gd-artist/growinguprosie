@@ -22,7 +22,7 @@ const ShoppingCart = (props) => {
 
         <div className="shoppingCartBackground">
             <Link to="/">
-            <p>Back to search results</p>
+            <p className="noUnderlineLink">Back to search results</p>
             </Link>
 
             <div className="shoppingCartBox">
@@ -35,7 +35,7 @@ const ShoppingCart = (props) => {
                 })}
             </div>  
             <div>
-            <p>Total: $ {props.cartTotal}</p>
+            <p className="cartTotal">Total: $ {props.cartTotal}</p>
             </div>
     
         </div>

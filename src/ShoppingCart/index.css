@@ -1,0 +1,15 @@
+.shoppingCartBackground {
+    width: 100vw;
+    height: auto;
+    padding: 4vw;
+}
+
+.shoppingCartBox {
+    width: 80vw;
+    height: auto;
+    margin: 2vw; 
+}
+
+.noUnderlineLink {
+    text-decoration: none;
+}

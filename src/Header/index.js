@@ -36,16 +36,6 @@ const Header = (props) => {
 
     }, []);
 
-    // const getAverage = (reviews) => {
-    //     reviews.map((review) => {
-    //         return review.stars.reduce((a.review.stars, b.review.stars => (a.review.stars + b.review.stars), 0) / review.stars.length;
-    //     });
-    // };
-
-    // const getAverage = (reviews) => {
-    //     return Math.round(reviews.reduce((acc, curr => (acc + curr.stars), 0) / reviews.length));
-    //  };
-
     const getAverage = (reviews) => {
         let TotalStars = reviews.reduce((prev, curr) => (curr.stars + prev), 0)
         // TotalStars is 3.6666 
@@ -63,10 +53,6 @@ const Header = (props) => {
             })
 
     };
-
-    //  const getAverage = (reviews) => {
-    //     return Math.round(reviews.reduce((acc, curr) => (acc + curr.stars), 0) / reviews.length));
-    //  };
      
 
     return (
