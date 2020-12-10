@@ -118,46 +118,8 @@
     }
   ],
   "shoppingCart": [
-    {
-      "id": "",
-      "name": "",
-      "itemType": "",
-      "size": "",
-      "price": "",
-      "quantity": "",
-      "materialColor": "",
-      "materialType": "",
-      "printColor": "",
-      "picture": "",
-      "description": ""
-    },
-    {
-      "promocode": "",
-      "subtotal": "",
-      "shippingCost": "",
-      "estimateTax": "",
-      "estimatedTotal": ""
-    }
+
   ],
   "checkout": [
-    {
-      "id": "",
-      "name": "",
-      "itemType": "",
-      "size": "",
-      "price": "",
-      "quantity": "",
-      "materialColor": "",
-      "materialType": "",
-      "printColor": "",
-      "picture": "",
-      "description": ""
-    },
-    {
-      "subtotal": "",
-      "shippingCost": "",
-      "zipcodeTax": "",
-      "actualTotal": ""
-    }
-  ]
+
 }
